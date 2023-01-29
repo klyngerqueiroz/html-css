@@ -8,7 +8,7 @@ form.addEventListener("submit", (e)=>{
   if(username.value == '' && url.value == ''){
     alert('Todos os campos precisam ser preenchidos')
   }else if
-    (validarUrl(url.value) === true && username.value === true){
+    (validarUrl(urlInput.value) === true && username.value === true){
     alert('Informações enviadas')
   }else{
     alert('Requisição negada')
@@ -70,14 +70,14 @@ function validarUrl(url){
 
 // ---------- VALIDAÇÃO URL ---------- //
 let urlInput = document.getElementById("url");
-let urllLabel = document.querySelector('label[for="url"]');
+let urlLabel = document.querySelector('label[for="url"]');
 let urlHelper = document.getElementById("url-helper");
 
-togglePopup(urlInput, urlHelper)
+togglePopup(urlInput, urlLabel)
 
 // Validar valor do input
 
-urlInput.addEventListener("keyup", ()=>{
+url.addEventListener("keyup", ()=>{
         if(validarUrl(url.value)!==true){
        // Adicionar estilos dinâmicos se o valor estiver correto
        estilizarInputIncorreto(urlInput, urlHelper);
