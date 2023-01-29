@@ -2,14 +2,18 @@
 let username = document.getElementById('username')
 let url = document.getElementById('url')
 let form = document.querySelector('form')
+let idade = document.getElementById('idade')
 
 form.addEventListener("submit", (e)=>{
   if(username.value == '' && url.value == ''){
     alert('Todos os campos precisam ser preenchidos')
+  }else if
+    (validarUrl(url.value) === true && username.value === true){
+    alert('Informações enviadas')
   }else{
-    alert('ok')
+    alert('Requisição negada')
   }
-
+    e.preventDefault()
 })
 
 //---------- FUNÇÕES GERAIS -------------- //
@@ -65,21 +69,35 @@ function validarUrl(url){
 }
 
 // ---------- VALIDAÇÃO URL ---------- //
-let urllInput = document.getElementById("url");
+let urlInput = document.getElementById("url");
 let urllLabel = document.querySelector('label[for="url"]');
-let urllHelper = document.getElementById("url-helper");
+let urlHelper = document.getElementById("url-helper");
 
-togglePopup(urlInput, urlLabel)
+togglePopup(urlInput, urlHelper)
 
 // Validar valor do input
 
-url.addEventListener("blur", (e)=>{
+urlInput.addEventListener("keyup", ()=>{
         if(validarUrl(url.value)!==true){
        // Adicionar estilos dinâmicos se o valor estiver correto
-       estilizarInputCorreto(urlInput, urlHelper);
+       estilizarInputIncorreto(urlInput, urlHelper);
+       urlHelper.innerText = "Precisa inserir um endereço válido";
   } else {
     // Adicionar estilos dinâmicos se o valor tiver menos de 3 caracteres
-    urllHelper.innerText = "Precisa inserir um email válido";
-    estilizarInputIncorreto(urlInput, urllHelper);
+    estilizarInputCorreto(urlInput, urlHelper);
   }
     })
+    /*
+
+    // validar checkbox //
+
+    let idadeInput = document.getElementById('idade')
+    let idadeLabel = document.getElementById('labe[for="idade"]')
+
+    idade.addEventListener("change", (e)=>{
+      if(checkbox.checked){
+        console.log("botao checado !")
+      }else{
+        console.log("não marcou")
+      }
+    } )*/

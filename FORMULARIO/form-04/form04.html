@@ -20,92 +20,14 @@
         <label for="url">url</label>
         <input type="url" name="url" id="url">
         <p id="url-helper" class="helper-text"></p>
-        <!-----
-        <label for="idade">18+</label>
-        <input type="checkbox" name="idade" id="idade">
-        --->
+        
+        <label for="checkbox">18+</label>
+        <input type="checkbox" name="checkbox" id="checkbox">
+        
 
         <button type="submit">Enviar</button>
 
     </form>
-
- 
-
-
-
-
-/*
-  let inputsCorretos = {
-    username: false,
-    url: false
-  }
-  form.addEventListener("submit", function(e){
-    if(inputsCorretos.username === false ||
-      inputsCorretos.url === false 
-      ){
-       
-        alert("Todos os campos precisam ser preenchidos");
-      }else{
-        alert("Formulario enviado com sucesso")
-      }*/
- 
-
-
-        /*
-        let form = document.querySelector('form')
-        let nomeInput = document.getElementById('nome')
-        let url = document.getElementById('url')
-        let idadeInput = document.getElementById('idade')
-        let textInput = document.getElementById('text')
-
-        form.addEventListener("submit", (e)=>{
-            if((nomeInput.value == '') && ( url.value == '')){
-                alert('preencha o campo')
-            }else if
-               (nomeInput.value === true && validarUrl(url.value) === true){
-                alert('cadastrou')
-               }else{
-                alert('denied')
-               }
-    e.preventDefault()
-    });
-    
-
-
-
-
-
-
-
-    /******FUNÇÃO EMAIL******
-
-    function validarUrl(url){
-    let urlPattern =  /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; 
-    return urlPattern.test(url)
-    }
-
-    nomeInput.addEventListener("keyup", (e)=>{
-        let valor = e.target.value
-        if(valor.length < 3){
-            textInput.textContent = 'sua senha precisa ter mas de 3 digitos'
-        }else{
-            textInput.textContent = ''
-        }
-        
-    })
-
-    url.addEventListener("keyup", (e)=>{
-        if(validarUrl(url.value)!==true){
-            textInput.textContent = 'informe uma url valida'
-        }else{
-            textInput.textContent = ''
-        }
-        
-    })
-
-*/
-
-   
     
 </body>
 </html>
