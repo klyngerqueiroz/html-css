@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+*{
+    
+    outline: 0px;
+    margin: 0 auto;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root{
+    --cor-form: #26CD62;
+    --cor1: #03A696;
+    --cor2: #8FD9D1;
+    --cor3: #F26363;
+    --cor4: #F2F2F2;
+    --cor5: #0D0D0D;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #F26363;
+}
+section{
+    background-color:var(--cor4);
+    width: 350px;
+    height: 380px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.623);
+}
+#form{
+    padding: 20px;
+}
+h2{
+
+    margin-top: 5px;
+    margin-bottom: 50px;
+    font-size: 1em;
+    text-align: center;
+    color: rgba(49, 49, 49, 0.712);
+    
+}
+/**INPUTS*/
+
+#text-lost-password{
+    text-align: right;
+    font-size: .9em;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    color: rgba(49, 49, 49, 0.712);
+}
+#form > button[type=submit]{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+    color: rgba(49, 49, 49, 0.712);
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.493);
+    
+}
+#form > button[type=reset]{
+    width: 100%;
+    height: 40px;
+
+    border: 2px solid rgba(255, 255, 255, 0.493);
+    color: rgba(49, 49, 49, 0.712);
+    font-weight: bold;
+    
+    
+}
+#form > button[type="submit"]:hover{
+    cursor: pointer;
+    color: #fff;
+
+    background-color: var(--cor-form);
+   
+}
+#form > button[type="reset"]:hover{
+    cursor: pointer;
+    background-color: var(--cor-form)
+   
+}
+
+/* ---------- Estilos dinâmicos ---------- */
+#textFormEmail{
+    color: rgba(49, 49, 49, 0.295);
+    margin-bottom: 10px;
+    font-size: .8em;
+
+}
+#textFormSenha{
+    color: rgba(49, 49, 49, 0.295);
+    margin-bottom: 10px;
+    font-size: .8em;
+    
+}
+#textForm{
+    color: rgba(49, 49, 49, 0.295);;
+    margin-top: 10px;
+    font-size: .8em;
+    text-align: center;
+} 
+
+/*---------Estilos do input----------*/
+div.campo{
+    margin: 5px 0px;
+    width: 100%;
+    height: 40px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.315);
+    border: 1px solid rgba(49, 49, 49, 0.295);
+} 
+
+div.campo > span{
+    color: rgba(49, 49, 49, 0.295);
+    padding: 5px;
+
+}
+div.campo > input{
+    font-size: .8em;
+    width:87.6%;
+    height: 100%;
+    transform: translateY(-5px);
+    border: none;
+    padding-left: 5px;
+   
+}
+div.campo > input:hover{
+    transition-delay: 1s;
+    background-color:var(--cor-form);
+    color: #fff;
+
+}

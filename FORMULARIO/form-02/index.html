@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+
+    <title>Formulario 01</title>
+
+    <style>
+        input.error{
+            background-color: red;
+            color: blueviolet;
+        }
+        input.correct{
+            background-color: rgb(54, 170, 54);
+            color: aqua;
+        }
+        .visible{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formulario de Cadastro</h1>
+    <form id="form" autocomplete="off">
+        <!----------
+        <div>
+            <label for="name">*Seu nome</label>
+            <input type="text" name="name" id="name">
+            <small id="textName"></small>
+        </div>
+        --->
+  
+        <div>
+            <label for="email">*Seu e-mail</label>
+            <input type="email" name="email" id="email" autocomplete="off">
+            <small id="textEmail"></small>
+        </div>
+
+        <div>
+            <label for="password">*Sua senha</label>
+            <input type="password" name="senha" id="password" autocomplete="off">
+            <small class="textPassword"></small>
+        </div>
+
+       <button type="submit">Enviar</button>
+        <small id="textForm"></small>
+
+    </form>
+
+    <script>
+
+         //let name = document.getElementById("name")
+          
+
+            let email = document.getElementById("email")
+            let password = document.getElementById("password")
+            let form = document.getElementById("form")
+            let textForm = document.getElementById("textForm")
+            let textEmail = document.getElementById("textEmail")
+            let textPassord = document.getElementById("textPassword")
+           
+
+            form.addEventListener('submit', (event)=>{
+                if(email.value == '' && password.value == '') {
+                    textForm.textContent = 'Preencha os campos corretamente'
+                }else{
+                  console.log(email.value);
+                  console.log(password.value);
+                }
+                event.preventDefault()
+            })
+
+            email.addEventListener("keyup", ()=>{
+                if(validateEmail(email.value) !==true){
+                  textEmail.textContent = "name@dominio.com"
+                }else{
+                    textEmail.textContent = ''
+                }
+            })
+
+            password.addEventListener("keyup", ()=>{
+                if(validateSenha(password.value)!==true){
+                    textPassword.textContent = "senha tem que ter no minimo 6 digitos";
+                }else{
+                    textPassword.textContent = ''
+                }
+            });
+
+                    password.addEventListener("keyup", () => {
+                    if (validatorPassword(password.value) !== true) {
+                        textPassword.textContent =
+                        "O formato da senha deve ser no min 6 caracteres";
+                    } else {
+                        textPassword.textContent = "";
+                    }
+                    });
+
+       
+    </script>
+    
+</body>
+</html>

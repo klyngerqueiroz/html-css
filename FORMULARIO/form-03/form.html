@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/style.css">
+
+    <script src="form.js" defer></script>
+    <title>Formulario</title>
+</head>
+<body>
+
+    <main>
+        <section>
+            
+                <form id="form" autocomplete="off"> 
+
+            
+                        <h2>Olá, Informe os dados abaixo</h2>
+                
+                       
+                            <div class="campo">
+                                <span class="material-icons">person</span>
+                                <input type="email" name="email" id="email" placeholder="digite seu email">
+                                <label for="email"></label>
+                            </div>
+                            <p id="textFormEmail" class="helper-text"></p>
+                    
+                
+                            <div class="campo">
+                                <span class="material-icons">key</span>
+                                <input type="password" name="password" id="password" placeholder="digite sua senha">
+                                <label for="password"></label>
+                            </div>
+                            <p id="textFormSenha" class="helper-text"></p>
+                            <p id="text-lost-password">esqueceu a senha ?</p>
+
+                    
+                      
+                                 <button type="submit">Enviar</button>
+                                  <p id="textForm"></p>
+                    
+                </form>
+          
+        </section>
+    </main>
+    
+</body>
+</html>
