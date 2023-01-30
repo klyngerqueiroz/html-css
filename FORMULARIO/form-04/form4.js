@@ -1,21 +1,19 @@
-
-let username = document.getElementById('username')
-let url = document.getElementById('url')
 let form = document.querySelector('form')
-let idade = document.getElementById('idade')
+let idade = document.querySelector('idade')
 
 form.addEventListener("submit", (e)=>{
   if(username.value == '' && url.value == ''){
     alert('Todos os campos precisam ser preenchidos')
   }else if
-    (validarUrl(urlInput.value) === true && username.value === true){
+    (validarUrl(urlInput.value) === true && validarUser(usernameInput.value)===true && checar()){
     alert('Informações enviadas')
   }else{
     alert('Requisição negada')
   }
     e.preventDefault()
+  
 })
-
+ 
 //---------- FUNÇÕES GERAIS -------------- //
 function togglePopup(input, label) {
   // Mostrar popup de campo obrigatório
@@ -42,43 +40,33 @@ function estilizarInputIncorreto(input, helper) {
 }
 
 // ---------- VALIDAÇÃO USERNAME ---------- //
-let usernameInput = document.getElementById("username");
-let usernameLabel = document.querySelector('label[for="username"]');
-let usernameHelper = document.getElementById("username-helper");
 
-togglePopup(usernameInput, usernameLabel)
-
-// Validar valor do input
-usernameInput.addEventListener("change", (e)=> {
-  let valor = e.target.value
-
-  if(valor.length < 3){
-    // Adicionar estilos dinâmicos se o valor tiver menos de 3 caracteres
-    usernameHelper.innerText = "Seu username precisa ter 3 ou mais caracteres";
-    estilizarInputIncorreto(usernameInput, usernameHelper)
-  } else {
-    // Adicionar estilos dinâmicos se o valor estiver correto
-    estilizarInputCorreto(usernameInput, usernameHelper);
-  }
-})
-
-
-function validarUrl(url){
-    let urlPattern =  /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; 
-    return urlPattern.test(url)
+function validarUrl(urlInput){
+    let urlInputPattern =  /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; 
+    return urlInputPattern.test(urlInput)
 }
 
-// ---------- VALIDAÇÃO URL ---------- //
+function validarUser(usernameInput){
+let usernameInputPattern = /^[a-zA-Z\ ]+$/;
+return usernameInputPattern.test(usernameInput)
+}
+
+function checar(){
+  if(document.getElementById('idade-menor').checked){
+  }else if
+    (document.getElementById('idade-maior').checked){
+  }
+}
+// Validar valor do input//
+
 let urlInput = document.getElementById("url");
 let urlLabel = document.querySelector('label[for="url"]');
 let urlHelper = document.getElementById("url-helper");
 
 togglePopup(urlInput, urlLabel)
 
-// Validar valor do input
-
-url.addEventListener("keyup", ()=>{
-        if(validarUrl(url.value)!==true){
+urlInput.addEventListener("keyup", ()=>{
+        if(validarUrl(urlInput.value)!==true){
        // Adicionar estilos dinâmicos se o valor estiver correto
        estilizarInputIncorreto(urlInput, urlHelper);
        urlHelper.innerText = "Precisa inserir um endereço válido";
@@ -87,17 +75,26 @@ url.addEventListener("keyup", ()=>{
     estilizarInputCorreto(urlInput, urlHelper);
   }
     })
-    /*
 
-    // validar checkbox //
+   
 
-    let idadeInput = document.getElementById('idade')
-    let idadeLabel = document.getElementById('labe[for="idade"]')
+    // Validar valor do input
+    let usernameInput = document.getElementById("username");
+    let usernameLabel = document.querySelector('label[for="username"]');
+    let usernameHelper = document.getElementById("username-helper");
 
-    idade.addEventListener("change", (e)=>{
-      if(checkbox.checked){
-        console.log("botao checado !")
-      }else{
-        console.log("não marcou")
+    togglePopup(usernameInput, usernameLabel)
+
+    usernameInput.addEventListener("keyup", (e)=> {
+       
+      if(validarUser(usernameInput.value)!==true){
+        // Adicionar estilos dinâmicos se o valor tiver menos de 3 caracteres
+        usernameHelper.innerText = "Seu username precisa ter 5 ou mais caracteres";
+        estilizarInputIncorreto(usernameInput, usernameHelper)
+      } else {
+        // Adicionar estilos dinâmicos se o valor estiver correto
+        estilizarInputCorreto(usernameInput, usernameHelper);
       }
-    } )*/
+    })
+    
+
