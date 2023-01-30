@@ -5,7 +5,7 @@ form.addEventListener("submit", (e)=>{
   if(username.value == '' && url.value == ''){
     alert('Todos os campos precisam ser preenchidos')
   }else if
-    (validarUrl(urlInput.value) === true && validarUser(usernameInput.value)===true && checar()){
+    (validarUrl(urlInput.value) === true && validarUser(usernameInput.value)){
     alert('Informações enviadas')
   }else{
     alert('Requisição negada')
@@ -47,7 +47,7 @@ function validarUrl(urlInput){
 }
 
 function validarUser(usernameInput){
-let usernameInputPattern = /^[a-zA-Z\ ]+$/;
+let usernameInputPattern = /^[A-Za-z0-9_-]{3,15}$/; //Qualquer username, entre 3 e 15 caracteres com letras, números, underline e traço
 return usernameInputPattern.test(usernameInput)
 }
 
@@ -89,7 +89,7 @@ urlInput.addEventListener("keyup", ()=>{
        
       if(validarUser(usernameInput.value)!==true){
         // Adicionar estilos dinâmicos se o valor tiver menos de 3 caracteres
-        usernameHelper.innerText = "Seu username precisa ter 5 ou mais caracteres";
+        usernameHelper.innerText = "Seu username precisa ter 3 ou mais caracteres";
         estilizarInputIncorreto(usernameInput, usernameHelper)
       } else {
         // Adicionar estilos dinâmicos se o valor estiver correto
