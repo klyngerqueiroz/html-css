@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pat-br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +7,20 @@
     <title>Formulario</title>
 </head>
 <body>
+
 <form>
-    
-  <input name="idade" type="radio" value="maior-idade" id="maior-idade" /> maior<br />
-  <input name="idade" type="radio" value="menor-idade" id="menor-idade"/> menor<br />
+
+  <label for="username">Nome </label>
+  <input type="text" name="username" id="username">
+  <p id="text-user"></p>
+
+  <label for="email">Email </label>
+  <input type="email" name="email" id="email">
+  <p id="text-email"></p>
+   <!-----
+  <input name="idade" type="radio" id="maiorIdade" /> maior<br />
+  <input name="idade" type="radio" id="menorIdade"/> menor<br />
+  --->
 
     
     <button type="submit">Enviar</button>
@@ -18,19 +28,62 @@
 </form>
 
 <script>
-  let idadeMaiorInput =  document.getElementById('maior-idade')
-  let idadeMenorInput = document.getElementById('menor-idade')
-  let form = document.querySelector('form')
+   let userName = document.getElementById('username');
+  let textContentUser = document.getElementById('text-user')
 
+  let emailInput = document.getElementById('email');
+  let textContentEmail = document.getElementById('text-email')
+
+  let form = document.querySelector('form')
+  
   form.addEventListener("submit", (e)=>{
-    if(idadeMaiorInput.checked){
-        alert('masculino')
-    }else if(idadeMenorInput.checked){
-        alert('femino')
+    if(userName.value == '' && emailInput.value == ''){
+      alert("Todos os campos precisam ser preenchidos")
     }
-    e.preventDefault()
+    else if(userName.value !== true && emailInput.value !== true){
+      alert('invalido')
+    }else{
+      alert('valido')
+    }
+    e.preventDefault();
   })
 
+ /*
+  function validarRadio(){
+    if(idadeMaiorInput.checked == false &&
+     idadeMenorInput.checked == false){
+      return false;
+    }
+   return true;
+  }
+*/
+//validar usuario // 
+ 
+ 
+
+  userName.addEventListener("keyup", (e)=>{
+    let valor = e.target.value;
+    if(valor.length <5){
+      textContentUser.textContent = 'Senha precisa ser maior de 5'
+    }else{
+      textContentUser.textContent = ''
+    }
+  } )
+
+  //validar email // 
+ 
+
+  emailInput.addEventListener("change", (e)=>{
+    let  result = e.target.value
+    if(result.includes("@") && valor.includes(".com") !==false){
+      textContentEmail.textContent = 'ex: fulano@gmail.com'
+    }else{
+      textContentEmail.textContent = ''
+    }
+  } )
+
+
+  
   
 
 </script>
