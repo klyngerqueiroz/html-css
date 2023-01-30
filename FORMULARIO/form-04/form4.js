@@ -1,11 +1,10 @@
 let form = document.querySelector('form')
-let idade = document.querySelector('idade')
 
 form.addEventListener("submit", (e)=>{
   if(username.value == '' && url.value == ''){
     alert('Todos os campos precisam ser preenchidos')
   }else if
-    (validarUrl(urlInput.value) === true && validarUser(usernameInput.value)){
+    (validarUrl(urlInput.value) === true && validarUser(usernameInput.value) === true && validarBotao() ===true){
     alert('Informações enviadas')
   }else{
     alert('Requisição negada')
@@ -51,11 +50,18 @@ let usernameInputPattern = /^[A-Za-z0-9_-]{3,15}$/; //Qualquer username, entre 3
 return usernameInputPattern.test(usernameInput)
 }
 
-function checar(){
-  if(document.getElementById('idade-menor').checked){
+function validarBotao(){
+  var idadeMenor = document.getElementById('idade-menor')
+  var idadeMaior = document.getElementById('idade-maior')
+  
+  if(idadeMenor.checked == true){
+    return true
   }else if
-    (document.getElementById('idade-maior').checked){
-  }
+    (idadeMaior.checked !== true){
+    return false
+    }else{
+      return true;
+    }
 }
 // Validar valor do input//
 
@@ -75,8 +81,6 @@ urlInput.addEventListener("keyup", ()=>{
     estilizarInputCorreto(urlInput, urlHelper);
   }
     })
-
-   
 
     // Validar valor do input
     let usernameInput = document.getElementById("username");
