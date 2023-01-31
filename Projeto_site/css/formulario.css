@@ -1,0 +1,96 @@
+#form{
+    border: 1px solid blue;
+    background-color: rgba(192, 192, 192, 0.788);
+
+}
+textarea{
+    font-family: sans-serif;
+    font-size: 1em;
+
+}
+.grupo:before, .grupo:after {
+    content: " ";
+    display: table;
+}
+
+.grupo:after {
+    clear: both;
+}
+
+.campo {
+    margin-bottom: 1em;
+  
+}
+
+.campo label {
+    margin-bottom: 0.8em;
+    color: #666;
+    display: block;
+    
+}
+
+div.grupo .campo {
+    float:  left;
+    margin-right: 1em;
+    padding: 10px;  
+    margin: auto;
+    position: relative;
+    width: 100%;
+
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="url"],
+.campo input[type="tel"],
+.campo select,
+.campo textarea {
+    padding: 0.2em;
+    border: 1px solid #CCC;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    display: block;
+}
+
+.campo select option {
+    padding-right: 1em;
+}
+
+label.checkbox {
+    color: #000;
+    display: inline-block;
+    margin-right: 1em;
+    margin-top:30px;
+    background-color: #206620;
+}
+.helper-text{
+    font-size: .8em;
+    color: red;
+}
+
+/*---------Estilos [INPUTS]/[POPUP]-------*/
+.required-popup::after {
+    content: "*Campo obrigatório";
+    position: absolute;
+    color: #DFDFDF;
+    font-size: .65rem;
+    padding: .2rem .3rem;
+    width: auto;
+    display: block;
+    background-color: #202020;
+  }
+  
+  input.error {
+    border: solid 2px #992020;
+    background-color: #CCBBBB;
+    color: #662020;
+  }
+  
+  input.correct {
+    background-color: #BBCCBB;
+    border: solid 2px #206620;
+    color: #206620;
+  }
+  
+  .visible {
+    display: block;
+  }
