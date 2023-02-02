@@ -3,17 +3,17 @@
 
 @font-face {
     font-family: UnifrakturCook-bold;
-    src: url(/fontes/UnifrakturCook-Bold.ttf);
+    src: url(fontes/UnifrakturCook-Bold.ttf);
 }
 
 @font-face {
     font-family: ShadowsIntoLight-Regular;
-    src: url(/fontes/ShadowsIntoLight-Regular.ttf);
+    src: url(fontes/ShadowsIntoLight-Regular.ttf);
 }
 
 @font-face {
     font-family: Unbounded-Variablefont;
-    src: url(/fontes/Unbounded-VariableFont_wght.ttf);
+    src: url(fontes/Unbounded-VariableFont_wght.ttf);
 }
 
 /* formataçao */
@@ -144,6 +144,12 @@ h4{
     padding: 0.8em;
 }
 
+h5{
+    font-family: Unbounded-Variablefont;
+    color: black;
+    text-shadow: black;
+    font-size: 1.5em;
+}
 
 
 

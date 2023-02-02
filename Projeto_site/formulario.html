@@ -1,121 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Projeto_site/css/formulario.css">
-    <link rel="stylesheet" href="/Projeto_site/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-
-    <script src="form.js" defer></script>
-    <title>envio de noticias</title>
-</head>
-<body>
-   <header>
-    <div class="sp">
-        <div id="logo">
-         <h1 class="logo">Hypecurioso</h1>
-        </div>
-        <div class="area-menu">
-         <a  class="pag" href="/Projeto_site/1index.HTML">News</a>
-         <a  class="pag" href="/Projeto_site/2tecnologia.html">Tecnologia</a>
-         <a  class="pag" href="/Projeto_site/3esportes.html">Esporte</a>
-         <a  class="pag" href="/Projeto_site/4ufologia.html">Ufologia</a>
-        </div>
-    </div>
-   </header>
-    
-   <div class="noticia" >
-    <div class="noticia-container">
-        <div class="mini">
-            <img class="mini-img" src="https://s2.glbimg.com/7mALc4OkHXmyRzZPQ-Znudn7swI=/0x0:1024x683/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/t/W/zNLlCQTz6j9NGgbVaEyg/gettyimages-528818337.jpg" alt="">
-           <a class="mini-link" href="">Piloto preso desfalca equipe em GP</a>
-        </div>
-        <div class="mini">
-         <img class="mini-img" src="https://ufo.com.br/uploads/7e9d0273c599b3189ca7dd303fe711191671409128-.jpg" alt="">
-         <a class="mini-link" href="">Telescópio Espacial James Webb estuda sete planetas potencialmente habitáveis</a>
-        </div>
-        <div class="mini">
-            <img class="mini-img" src="https://s2.glbimg.com/i96FNmCro1LgzR_uvvhjs9iMCRE=/0x0:997x561/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/7/y/mxZ6QUR6O7VvpZDwtN1A/image.jpg" alt="">
-           <a class="mini-link" href="">ursos polares</a>
-        </div>
-        <div class="mini">
-            <img class="mini-img" src="https://conteudo.imguol.com.br/c/noticias/d6/2022/12/20/urso-polar-visto-em-terra-1671539431458_v2_900x506.png.webp" alt="">
-           <a class="mini-link" href="">ursos polares</a>
-        </div>
-    </div>
-      <div class="conteudo">
-        <div class="noticia1">
-            <h1>Direito de Imagem</h1>
-            <span class="data">Constituição da República Federativa do Brasil de 1988</span>
-            <p>
-                Art. 5º Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade, nos termos seguintes:
-                …
-                X - são invioláveis a intimidade, a vida privada, a honra e a imagem das pessoas, assegurado o direito a indenização pelo dano material ou moral decorrente de sua violação;</p>
-
-                <form id="form" action="#" method="post">
-                  
-                    <div class="grupo">
-                        <div class="campo">
-                            <label for="username">Nome: </label>
-                            <input type="text" name="nome" id="username" required>
-                            <small id="username-helper" class="helper-text"></small>
-                        </div>
-                        <div class="campo">
-                            <label for="url">url: </label>
-                            <input type="url" name="url" id="url" required>
-                            <small id="url-helper" class="helper-text"></small>
-                        </div>
-                           <label class="checkbox">
-                           <label for="idade-maior">+18 </label>
-                           <input type="radio" name="idade" id="idade-maior" value="maior"><br>
-                           <label for="idade-menor">- 18</label>
-                           <input type="radio" name="idade" id="idade-menor" value="menor"><br>
-                           <button type="submit" class="button">Enviar</button>
-                        
-                        </div>
-                </form>
-        </div>
-      </div>
-      </div>  
-      <div id="final">
-        <footer>
-            <div class="wrapper">
-                <p class="copyright">© by Hypecurioso 2022</p>
-                <div class="icon facebook">
-                   <div class="tooltip">
-                      Facebook
-                   </div>
-                   <span><i class="fab fa-facebook-f"></i></span>
-                </div>
-                <div class="icon twitter">
-                   <div class="tooltip">
-                      Twitter
-                   </div>
-                   <span><i class="fab fa-twitter"></i></span>
-                </div>
-                <div class="icon instagram">
-                   <div class="tooltip">
-                      Instagram
-                   </div>
-                   <span><i class="fab fa-instagram"></i></span>
-                </div>
-                <div class="icon github">
-                   <div class="tooltip">
-                      Github
-                   </div>
-                   <span><i class="fab fa-github"></i></span>
-                </div>
-                <div class="icon youtube">
-                   <div class="tooltip">
-                      YouTube
-                   </div>
-                   <span><i class="fab fa-youtube"></i></span>
+         <html lang="en">
+         <head>
+             <meta charset="UTF-8">
+             <meta http-equiv="X-UA-Compatible" content="IE=edge">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <link rel="stylesheet" href="css/style.css">
+             <link rel="stylesheet" href="css/formulario.css">
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+         
+             <script src="form.js" defer></script>
+             <title>envio de noticias</title>
+         </head>
+         <body>
+            <header>
+             <div class="sp">
+                 <div id="logo">
+                  <h1 class="logo">Hypecurioso</h1>
+                 </div>
+                 <div class="area-menu">
+                  <a  class="pag" href="1index.HTML">News</a>
+                  <a  class="pag" href="2tecnologia.html">Tecnologia</a>
+                  <a  class="pag" href="3esportes.html">Esporte</a>
+                  <a  class="pag" href="4ufologia.html">Ufologia</a>
+                 </div>
+             </div>
+            </header>
+             
+            <div class="noticia" >
+             <div class="noticia-container">
+               <div class="mini">
+                  <img class="mini-img" src="https://static.dw.com/image/60231219_906.jpg" alt="planetas">
+                 <a class="mini-link" href="">Telescópio Espacial James Webb estuda sete planetas potencialmente habitáveis</a>
+              </div>
+              <div class="mini">
+                  <img class="mini-img" src="https://www.science.org/do/10.1126/science.add7249/abs/_20220628_on_ufos_craft_ap_21154653187711.jpg" alt="ufo">
+                 <a class="mini-link" href="">UFO é registrado saindo do mar na Califórnia por câmera de vigilância</a>
+              </div>
+              <div class="mini">
+                  <img class="mini-img" src="https://impa.br/wp-content/uploads/2018/06/pesquisas-eleitorais-1200x637.png" alt="antena">
+                 <a class="mini-link" href="">“Sinais de interesse” aparecem na pesquisa do SETI auxiliada por cientistas cidadãos</a>
+              </div>
+              <div class="mini">
+                  <img class="mini-img" src="https://ufo.com.br/wp-content/uploads/2022/12/38301d023de593e769e78254c47a514b1671122475-860x453.jpg" alt="documentos">
+                 <a class="mini-link" href="">Relatórios do STRATCOM revelam UFOs</a>
+              </div>
+             </div>
+               <div class="conteudo">
+                 <div class="noticia1">
+                     <h1>Direito de Imagem</h1>
+                     <span class="data">Constituição da República Federativa do Brasil de 1988</span>
+                     <p>
+                         Art. 5º Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade, nos termos seguintes:
+                         …
+                         X - são invioláveis a intimidade, a vida privada, a honra e a imagem das pessoas, assegurado o direito a indenização pelo dano material ou moral decorrente de sua violação;</p>
+         
+                         <form action="#" method="post">
+                           
+                             <fieldset class="grupo">
+                                 <div class="campo">
+                                     <label for="username">Nome: </label>
+                                     <input type="text" name="nome" id="username" placeholder="Digite seu nome" required>
+                                     <small id="username-helper" class="helper-text"></small>
+                                 </div>
+                                 <div class="campo">
+                                     <label for="url">url: </label>
+                                     <input type="url" name="url" id="url" placeholder="Insira o link da notícia" required>
+                                     <small id="url-helper" class="helper-text"></small>
+                                 </div>
+                                 <label class="checkbox">
+                                    <label for="idade-maior">Maior de idade </label>
+                                    <input type="radio" name="idade" id="idade-maior" value="maior">
+                                    <label for="idade-menor">Menor de idade </label>
+                                    <input type="radio" name="idade" id="idade-menor" value="menor">
+                                 <button type="submit" class="button">Enviar</button>
+                                 
+                              </fieldset>
+                         </form>
+                 </div>
+               </div>
+               </div>  
+               <div id="final">
+                 <footer>
+                     <div class="wrapper">
+                         <p class="copyright">© by Hypecurioso 2022</p>
+                         <div class="icon facebook">
+                            <div class="tooltip">
+                               Facebook
+                            </div>
+                            <span><i class="fab fa-facebook-f"></i></span>
+                         </div>
+                         <div class="icon twitter">
+                            <div class="tooltip">
+                               Twitter
+                            </div>
+                            <span><i class="fab fa-twitter"></i></span>
+                         </div>
+                         <div class="icon instagram">
+                            <div class="tooltip">
+                               Instagram
+                            </div>
+                            <span><i class="fab fa-instagram"></i></span>
+                         </div>
+                         <div class="icon github">
+                            <div class="tooltip">
+                               Github
+                            </div>
+                            <span><i class="fab fa-github"></i></span>
+                         </div>
+                         <div class="icon youtube">
+                            <div class="tooltip">
+                               YouTube
+                            </div>
+                            <span><i class="fab fa-youtube"></i></span>
+                         </div>
+                      </div>
+                 </footer>
                 </div>
              </div>
-        </footer>
-       </div>
-    </div>
-</body>
-</html>
+         </body>
+         </html>
+       

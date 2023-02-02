@@ -12,7 +12,7 @@ form.addEventListener("submit", (e)=>{
     textForm.textContent = 'preencha todos os dados';
 }else if
     (validarEmail(email.value) === true && validarSenha(password.value) === true){
-     textForm.textContent = 'Cadastro realizado'
+     textForm.textContent = 'Acesso liberado'
 }else{
     textForm.textContent = 'Solicitação negada'
 }
@@ -22,6 +22,7 @@ form.addEventListener("submit", (e)=>{
 });
 
 /****FUNÇÕES***/
+
 
 function validarEmail(email){
     let emailPattern = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/; 
